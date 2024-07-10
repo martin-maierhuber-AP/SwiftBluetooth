@@ -2,7 +2,7 @@ import Foundation
 import CoreBluetooth
 
 public class Peripheral: NSObject {
-    private(set) var cbPeripheral: CBPeripheral
+    public private(set) var cbPeripheral: CBPeripheral
     private lazy var wrappedDelegate: PeripheralDelegateWrapper = .init(parent: self)
 
     internal let eventQueue = DispatchQueue(label: "peripheral-event-queue")
